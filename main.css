@@ -1,0 +1,157 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap")
+
+body{
+    font-family: lato;
+    color: #494949;
+    width: 100%;
+}
+
+.main_heading{
+    font-size: 50px;
+    text-align: center;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-family: montserrat;
+    margin: 25px;
+}
+
+.sub_heading{
+    font-size: 26px;
+    text-align: center;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-family: montserrat;
+    margin: 25px;
+}
+
+.main_div{
+    margin-top: 100px;
+}
+
+.leftpane{
+display: inline-flex;
+width: 50%;
+align-items: center;
+margin-left: 50px;
+}
+
+.rightpane{
+display: inline-flex;
+width: 35%;
+align-items: center;
+float: right;
+}
+
+.login_form{
+    width: 300px;
+    float: right;
+    margin-top: 100px;
+}
+
+.register_form{
+    width: 300px;
+    float: right;
+    margin-top: 10px;
+}
+
+.input_txt{
+    width: 300px;
+    height: 45px;
+    color: #494949;
+    border-radius: 5px;
+    border: 1px solid #eaeaea;
+    outline: none;
+    font-size: 18px;
+    font-weight: 600;
+    text-indent: 20px;
+    font-family: lato;
+    margin-bottom: 15px;
+}
+
+.links{
+    text-decoration: none;
+    font-family: lato;
+    color: #ff5f5f;
+    font-weight: 900;
+}
+
+.sbt_btn{
+    width: 300px;
+    height: 40px;
+    color: #ffffff;
+    border-radius: 5px;
+    background-color: #ff5f5f;
+    border: 1px solid #eaeaea;
+    outline: none;
+    font-size: 18px;
+    font-weight: 600;
+    font-family: lato;
+    margin-bottom: 15px;
+}
+
+::placeholder{
+    color: #cacaca;
+}
+
+/* SVG Animation Code Start */
+
+svg#freepik_stories-plain-credit-card:not(.animated) .animable{
+    opacity: 0;
+}
+
+svg#freepik_stories-plain-credit-card.animated
+#freepik--background-complete--inject-49 {
+    animation: 6s infinite linear floating;
+    animation-delay: 1.5s;
+}
+
+svg#freepik_stories-plain-credit-card.animated #freepik--shadow--inject-49 {
+    animation: 6s infinite linear shake;
+    animation-delay: 0s;
+}
+
+svg#freepik_stories-plain-credit-card.animated #freepik--character--inject-49 {
+    animation: 1.5s infinite linear floating;
+    animation-delay: 0s;
+}
+
+@keyframes floating {
+    0% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+@keyframes shake {
+    10%,
+    90% {
+        transform: translate3d(-1px, 0, 0);
+    }
+
+    20%,
+    80% {
+        transform: translate3d(2px, 0, 0);
+    }
+
+    30%,
+    50%,
+    70% {
+        transform: translate3d(-4px, 0, 0);
+    }
+
+    40%,
+    60% {
+        transform: translate3d(4px, 0, 0);
+    }
+}
+
+/* SVG Animation Code Ends */
