@@ -13,7 +13,14 @@ include 'server.php';
     </head>
 
     <body>
+        <div class='headerelememts'>
 
+            <a href='logout.php'> <input type='button' value='Logout'></a>
+            <a style='font-size:18x; color: #000' href='adminPage.php'><?php echo $_SESSION['user'];
+?> </a>
+            <a style='font-size:18x; color: #000' href='adminPage.php'>Home </div>
+
+        </a>
     </body>
 
 </html>
