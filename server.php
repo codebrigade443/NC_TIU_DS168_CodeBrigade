@@ -1,4 +1,3 @@
-zzz
 <?php
 
 // Create connection
