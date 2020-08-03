@@ -694,7 +694,7 @@
                     <select name="role" class="input_txt">
                         <!-- <option value="0"> <span style="color: #cacaca;"> -- Select a role --</span></option> -->
                         <option value="1">Student</option>
-                        <option value="2">Admin</option>
+                        <!-- <option value="2">Admin</option> -->
                     </select>
                     <input class="input_txt" type="password" name="password" placeholder="Password" autocomplete="off">
                     <br>

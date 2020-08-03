@@ -49,6 +49,12 @@ if ( $con ) {
         $email = $_POST['email'];
         $role = $_POST['role'];
         $pwd = md5( $_POST['password'] );
+        $htno1 = $_POST['htno'];
+        $name1 = $_POST['name'];
+        $mobile1 = $_POST['mobile'];
+        $email1 = $_POST['email'];
+        $role1 = $_POST['role'];
+        $pwd1 = md5( $_POST['password'] );
 
         $checkAccount = "SELECT * from users_data where id='$htno'";
         $row = mysqli_query( $con, $checkAccount );
@@ -61,11 +67,14 @@ if ( $con ) {
 
             $createAccount = "INSERT INTO `users_data`(`id`, `name`, `mobile`, `email`, `role`, `password`) VALUES ('$htno', '$name', $mobile, '$email', $role, '$pwd' )";
             $row = mysqli_query( $con, $createAccount );
+
             if ( $role == 1 ) {
+                $createdAccount = "INSERT INTO studentdetails   (`htno`, `name`, `mobile`, `email`, `role`, `password`) VALUES ('$htno', '$name', $mobile, '$email', $role, '$pwd' )";
+                $rowd = mysqli_query( $con, $createdAccount );
                 $data = mysqli_fetch_assoc( $row );
                 $_SESSION['user'] = $data['name'] ;
+
                 header( 'location: studentPage.php' );
-                // $_SESSION['user'] = $_POST['name'] ;
             } else  if ( $role == 2 ) {
                 $data = mysqli_fetch_assoc( $row );
                 $_SESSION['user'] = $data['name'] ;
@@ -76,41 +85,6 @@ if ( $con ) {
         }
     }
     // Register Screen Ends
-
-    if ( isset( $_POST['register'] ) ) {
-
-        $htno = $_POST['htno'];
-        $name = $_POST['name'];
-        $mobile = $_POST['mobile'];
-        $email = $_POST['email'];
-        $role = $_POST['role'];
-        $pwd = md5( $_POST['password'] );
-
-        $checkAccount = "SELECT * from users_data where id='$htno'";
-        $row = mysqli_query( $con, $checkAccount );
-        // var_dump( $checkAccount );
-
-        if ( mysqli_num_rows( $row )>0 ) {
-            echo 'Account already exists';
-            header( 'location: index.php' );
-        } else {
-
-            $createAccount = "INSERT INTO `users_data`(`id`, `name`, `mobile`, `email`, `role`, `password`) VALUES ('$htno', '$name', $mobile, '$email', $role, '$pwd' )";
-            $row = mysqli_query( $con, $createAccount );
-            if ( $role == 1 ) {
-                $data = mysqli_fetch_assoc( $row );
-                $_SESSION['user'] = $data['name'] ;
-                header( 'location: studentPage.php' );
-                // $_SESSION['user'] = $_POST['name'] ;
-            } else  if ( $role == 2 ) {
-                $data = mysqli_fetch_assoc( $row );
-                $_SESSION['user'] = $data['name'] ;
-                header( 'location: adminPage.php' );
-
-            }
-
-        }
-    }
 
     if ( isset( $_POST['addstud'] ) ) {
 
@@ -133,8 +107,11 @@ if ( $con ) {
             echo 'Account already exists';
         } else {
 
-            $createAccount = "INSERT INTO `users_data`(`id`, `name`, `mobile`, `email`, `role`, `password`) VALUES ('$htno', '$name', $mobile, '$email', $role, '$pwd' )";
+            $createAccount = "INSERT INTO `sutdentdetails`(`name`, `htno`, `fname`, `mname`, `dob`, `doa`, `sc`, `lca`, `cc`, `gc`)
+            VALUES ('$a', '$b', '$c', '$d', '$e','$f', '$g','$h', '$i', '$j') ";
             $row = mysqli_query( $con, $createAccount );
+            echo '<script>alert("Account Created Successfully")</script>';
+            header( 'location: addstudent.php' );
 
         }
 

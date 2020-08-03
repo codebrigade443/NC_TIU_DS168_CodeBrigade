@@ -21,7 +21,7 @@ include 'header.php';
             <button class='clk_btn' name='studentData'> <a href='addstudent.php'>Add Students</a> </button>
             <button class='clk_btn' name='studentData'> <a href='paymentData.php'>Payments</a> </button>
             <button class='clk_btn' name='studentData'> <a href='transferData.php'>Transfer Certificates</a> </button>
-            <button class='clk_btn' name='studentData'> <a href='studentsData.php'>Manage Admins</a> </button>
+            <!-- <button class = 'clk_btn' name = 'studentData'> <a href = 'studentsData.php'>Manage Admins</a> </button> -->
         </div>
     </body>
 

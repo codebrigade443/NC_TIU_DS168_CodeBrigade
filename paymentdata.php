@@ -4,7 +4,7 @@ include 'header.php';
 
 ?>
 <h1 class='main_heading'> Students Data</h1>
-<p style=''>
+<p style='padding-left:450px'>
     <lable>Choose course</lable>
     <select name='' class='input_course'>
         <option value='1'>Bachelor of Commerce - General</option>
@@ -14,7 +14,7 @@ include 'header.php';
 </p>
 <table>
 
-    <thead>
+    <thead class='tabbody'>
         <tr>
             <td>HTNo.</td>
             <td>Name</td>
@@ -27,7 +27,7 @@ include 'header.php';
     </thead>
 
     <?php
-$checkAccount = 'SELECT * from users_data where role = 1';
+$checkAccount = 'SELECT * from users_data, sutdentdetails where role = 1';
 $row = mysqli_query( $con, $checkAccount );
 
 $nums = mysqli_num_rows( $row );
@@ -58,8 +58,3 @@ while( $data = mysqli_fetch_array( $row ) )
 }
 ?>
 </table>
-<style>
-.tabbody {
-    width=200px;
-}
-</style>
