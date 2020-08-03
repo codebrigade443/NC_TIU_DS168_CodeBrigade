@@ -27,7 +27,7 @@ include 'header.php';
     </thead>
 
     <?php
-$checkAccount = 'SELECT * from users_data, sutdentdetails where role = 1';
+$checkAccount = 'SELECT * from users_data where role = 1';
 $row = mysqli_query( $con, $checkAccount );
 
 $nums = mysqli_num_rows( $row );
